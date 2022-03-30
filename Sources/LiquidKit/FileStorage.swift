@@ -24,6 +24,9 @@ public protocol FileStorage {
 
     /// uploads the data under the given key
     func upload(key: String, data: Data) async throws -> String
+    
+    /// uploads the data under the given key
+    func upload(key: String, buffer: ByteBuffer) async throws -> String
 
     /// return a file content for
     func getObject(key source: String) async throws -> Data?
